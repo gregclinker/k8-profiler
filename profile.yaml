@@ -1,14 +1,8 @@
-xxx=fake-load fake-load-2-7dbdfb97f-jl25t  fake-load-2  0.32226753183943235
-xxx=fake-load fake-load-1-856cc9d6b5-9q7mr  fake-load-1  0.16592213781877385
-xxx=fake-load fake-load-3-989c84bdd-94ffs  fake-load-3  0.3629589094285471
-[fake-load-2:[fake-load:0.32226753183943235], fake-load-1:[fake-load:0.16592213781877385], fake-load-3:[fake-load:0.3629589094285471]]
-xxx=fake-load fake-load-2-7dbdfb97f-jl25t  fake-load-2  67764224
-xxx=fake-load fake-load-1-856cc9d6b5-9q7mr  fake-load-1  52465664
-xxx=fake-load fake-load-3-989c84bdd-94ffs  fake-load-3  110026752
+[fake-load-2:[fake-load:0.30678378990998084], fake-load-1:[fake-load:0.15163677150063593], fake-load-3:[fake-load:0.35132370070917]]
 ---
 description: "test profile"
 optimisation:
-  totalCpuSaving: "224m"
+  totalCpuSaving: "286m"
   totalMemorySaving: "1.18Gi"
 profile:
   fake-load-1:
@@ -19,13 +13,13 @@ profile:
     - name: "fake-load"
       resources:
         requests:
-          cpu: "199m"
+          cpu: "182m"
           memory: "60Mi"
         limits:
-          cpu: "249m"
+          cpu: "227m"
           memory: "75Mi"
       optimisation:
-        cpuSaving: "251m"
+        cpuSaving: "273m"
         memorySaving: "437Mi"
   fake-load-2:
     kind: "Deployment"
@@ -35,13 +29,13 @@ profile:
     - name: "fake-load"
       resources:
         requests:
-          cpu: "387m"
+          cpu: "368m"
           memory: "78Mi"
         limits:
-          cpu: "483m"
+          cpu: "460m"
           memory: "97Mi"
       optimisation:
-        cpuSaving: "17m"
+        cpuSaving: "40m"
         memorySaving: "415Mi"
   fake-load-3:
     kind: "Deployment"
@@ -51,12 +45,12 @@ profile:
     - name: "fake-load"
       resources:
         requests:
-          cpu: "436m"
-          memory: "126Mi"
+          cpu: "422m"
+          memory: "125Mi"
         limits:
-          cpu: "544m"
+          cpu: "527m"
           memory: "157Mi"
       optimisation:
-        cpuSaving: "-44m"
+        cpuSaving: "-27m"
         memorySaving: "355Mi"
 

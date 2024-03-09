@@ -19,7 +19,17 @@ class K8Profiler {
         def lastArg = null
         args.each { String arg ->
             if (arg == "--help" || arg == "-h") {
-                println "\nUsage: K8profiler --test --debug\n"
+                println ""
+                println "Usage: K8profiler --test --debug --dryrun --prometheushost 35.230.139.105 --profiletoapply profile.yaml"
+                println ""
+                println "Examples:"
+                println ""
+                println "Use built in test data - groovy K8profiler.groovy --test --debug"
+                println ""
+                println "Generate optimised profile against data in given Prometheus - groovy K8Profiler.groovy --prometheushost 35.230.139.105"
+                println ""
+                println "Apply the profile - groovy K8Profiler.groovy --profiletoapply profile.yaml"
+                println ""
                 System.exit(0)
             } else if (arg == "--test") {
                 profiler.test = true
